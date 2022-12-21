@@ -7,36 +7,67 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <Input type="number" id="red"></Input>
+   
+   <div class="center"> 
+    <Input type="number" id="red" >
     <Input type="number" id="green"></Input>
     <Input type="number" id="blue"></Input>
-    <button onclick="toRGB()">Click me</button>
-    <Script>
-        
-function toRGB() {
-  // Get the values from the input textboxes
-  var red = document.getElementById("red").value;
-  var green = document.getElementById("green").value;
-  var blue = document.getElementById("blue").value;
-
-  // Make sure the values are between 0 and 255
-  red = clamp(red, 0, 255);
-  green = clamp(green, 0, 255);
-  blue = clamp(blue, 0, 255);
-
-  // Construct the RGB string
-  var rgb = "rgb(" + red + "," + green + "," + blue + ")";
-
-  // Set the background color of the body to the RGB value
-  document.body.style.backgroundColor = rgb;
+    <br>
+    <button id="button" onclick="toRGB()">Click me</button>
+    <br>
+    <button  id="Help" onclick="myFunction()"> ?</button>
+    <script src="Script.js"></script>
+</div>
+<style>
+  .center {
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 350px;
+ width: 70%;
+ text-align: center;
+ 
+}
+#button {
+margin-top: 10px;
+height: 50px;
+    font-size: large;
+    padding-left: 15px;
+   padding-right: 15px;
+   border-radius: 25px;
+   font-family: "Lucida Handwriting";
+}
+#red {
+margin-right: 10px;
+border-radius: 25px;
+height: 50px;
+    font-size: large;
+    text-align: center;
+    
+}
+#blue {
+margin-left: 10px;
+border-radius: 25px;
+height:15px ;
+height: 50px;
+    font-size: large;
+    text-align: center;
+}
+#green {
+    border-radius: 25px;
+    height: 50px;
+    font-size: large;
+    text-align: center;
+}
+#Help{
+margin-top: 15px;
+height:15px ;
+height: 50px;
+    font-size: large;
+    text-align: center;
+    border-radius: 25px;
 }
 
-// Clamps a value between a minimum and a maximum
-function clamp(value, min, max) {
-  return Math.min(Math.max(value, min), max);
-}
 
-    </Script>
+</style>
 </body>
 </html>
